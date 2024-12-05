@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pathfinder</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="grid-container">
+        <div id="grid"></div>
+      </div>
+
+      <div class="sub-slider-container">
+        <div class="slider-title">Columns</div>
+        <div class="main-slider-container">
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="2"
+              max="30"
+              value="30"
+              class="slider"
+              id="columnRange"
+            />
+          </div>
+        </div>
+        <div class="sub-slider-container">
+          <div class="slider-title">Rows</div>
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="2"
+              max="30"
+              value="30"
+              class="slider"
+              id="rowRange"
+            />
+          </div>
+        </div>
+        <div class="sub-slider-container">
+          <div class="slider-title">X - destination</div>
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="0"
+              max="30"
+              value="15"
+              class="slider"
+              id="endX"
+            />
+          </div>
+        </div>
+        <div class="sub-slider-container">
+          <div class="slider-title">Y - destination</div>
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="0"
+              max="30"
+              value="15"
+              class="slider"
+              id="endY"
+            />
+          </div>
+        </div>
+        <div class="check-text">Heuristic:</div>
+        <select id="heuristicSelect">
+          <option value="manhattan">Manhattan</option>
+          <option value="euclidean">Euclidean</option>
+          <option value="chebyshev">Chebyshev</option>
+          <option value="sinusoidal">Sinusoidal</option>
+          <option value="fractal">Fractal</option>
+          <option value="random">Random</option>
+          <option value="longestPath">Longest Path</option>
+        </select>
+        <div class="check-counter">
+          <div class="check-text">
+            Points checked: <span id="checkNumber"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
