@@ -1,6 +1,9 @@
 body {
   font-family: "IBM Plex Mono", monospace;
   background-color: #ff204e;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 #grid {
