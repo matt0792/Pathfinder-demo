@@ -12,6 +12,7 @@ let endX = 15;
 let endY = 15;
 
 let checkNumber = document.getElementById("checkNumber");
+let pathNumber = document.getElementById("pathNumber");
 
 // Manhattan Heuristic
 function manhattan(position0, position1) {
@@ -180,6 +181,7 @@ function search() {
         temp = temp.parent;
       }
       checkNumber.textContent = closedSet.length;
+      pathNumber.textContent = path.length;
       return path.reverse();
     }
 
@@ -237,16 +239,16 @@ let endXSlider = document.getElementById("endX");
 let endYSlider = document.getElementById("endY");
 let gridContainer = document.getElementById("grid");
 
-columnSlider.oninput = function () {
-  cols = parseInt(this.value, 10);
-  initGrid(); 
-  displayGrid(search());
-};
-rowSlider.oninput = function () {
-  rows = parseInt(this.value, 10);
-  initGrid(); 
-  displayGrid(search());
-};
+// columnSlider.oninput = function () {
+//   cols = parseInt(this.value, 10);
+//   initGrid(); 
+//   displayGrid(search());
+// };
+// rowSlider.oninput = function () {
+//   rows = parseInt(this.value, 10);
+//   initGrid(); 
+//   displayGrid(search());
+// };
 endXSlider.oninput = function () {
   endX = parseInt(this.value, 10);
   end = grid[endX][endY];
