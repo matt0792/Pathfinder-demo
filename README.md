@@ -22,7 +22,7 @@ Features:
 
 ### Getting Started <a name="gettingStarted"></a>
 
-Clone the repository to your local machine or visit the GitHub Pages site.
+Clone the repository to your local machine or visit the GitHub Pages site at https://matt0792.github.io/Pathfinder-demo/.
 
 ### Usage <a name="usage"></a>
 
